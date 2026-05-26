@@ -1,0 +1,241 @@
+/* style.css – minimal, neutral, functional. No promotional banners, no brand push. */
+
+/* ---------- reset & base ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f7f9fc;
+    color: #111827;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* main container – centered, clean */
+.page-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+/* ---------- header (non-promotional) ---------- */
+.header-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.pill-badge {
+    display: inline-block;
+    background: #e9eef3;
+    color: #1f3a5f;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 0.25rem 0.9rem;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: #0b2b3d;
+    margin-bottom: 0.75rem;
+}
+
+.accent {
+    color: #2c6e9e;
+    font-weight: 700;
+}
+
+.desc-text {
+    font-size: 0.95rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.desc-text code {
+    background: #eef2f6;
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+    font-family: 'SF Mono', monospace;
+    font-size: 0.8rem;
+    color: #065a82;
+}
+
+/* ---------- link list layout: clean, minimal ---------- */
+.link-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin: 2rem 0 2rem 0;
+}
+
+/* each card-like item – neutral border, no aggressive shadows */
+.list-item {
+    background: #ffffff;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* subtle interaction – only border color shifts, no "promote" feel */
+.list-item:hover {
+    border-color: #cbd5e1;
+    background: #ffffff;
+}
+
+/* badge area + content */
+.item-badge-area {
+    padding: 1rem 1.5rem 0 1.5rem;
+}
+
+.topic-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    padding: 0.2rem 0.8rem;
+    border-radius: 40px;
+    background: #f1f5f9;
+    color: #2c3e50;
+    display: inline-block;
+}
+
+/* category specific colors (barely visible, only functional) */
+.topic-tag.cleaning { background: #e6f2f2; color: #19647e; }
+.topic-tag.transport { background: #e9edf5; color: #2c5282; }
+.topic-tag.shuttle { background: #eef2fa; color: #2c5282; }
+.topic-tag.painting { background: #faf0e6; color: #9b4b2e; }
+
+.item-content {
+    padding: 0.6rem 1.5rem 1.2rem 1.5rem;
+}
+
+/* title & dofollow link – clearly identifiable, no overpromotion */
+.entry-title {
+    font-size: 1.28rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0.25rem 0 0.6rem 0;
+}
+
+.dofollow-link {
+    text-decoration: none;
+    color: #1e3a5f;
+    transition: color 0.15s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.dofollow-link:hover {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+}
+
+/* summary text – informative, neutral */
+.summary {
+    font-size: 0.9rem;
+    color: #2d3a4b;
+    margin: 0.5rem 0 0.8rem 0;
+    line-height: 1.5;
+}
+
+/* meta row: source domain + subtle arrow */
+.meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+    border-top: 1px solid #f0f2f5;
+    padding-top: 0.7rem;
+}
+
+.domain {
+    font-size: 0.7rem;
+    font-weight: 450;
+    color: #5b6e8c;
+}
+
+.arrow {
+    font-size: 0.85rem;
+    color: #8196b0;
+    transition: transform 0.1s ease;
+}
+
+.list-item:hover .arrow {
+    transform: translate(2px, -2px);
+    color: #2563eb;
+}
+
+/* info footnote – factual, no fluff */
+.info-footnote {
+    background: #f1f4f8;
+    border-radius: 14px;
+    padding: 0.9rem 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    border: 1px solid #e2e8f0;
+    color: #2c3e50;
+}
+
+.info-footnote code {
+    background: #e6edf5;
+    padding: 0.15rem 0.4rem;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: #0f3b5c;
+}
+
+/* footer – very discreet */
+.site-footer {
+    text-align: center;
+    padding: 1.6rem 1rem 2rem;
+    border-top: 1px solid #eef2f8;
+    font-size: 0.7rem;
+    color: #6c7f96;
+    background: #fbfdfe;
+}
+
+/* responsive adjustments */
+@media (max-width: 680px) {
+    .page-container {
+        padding: 1.5rem 1rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .entry-title {
+        font-size: 1.1rem;
+    }
+    .item-content {
+        padding: 0.4rem 1.2rem 1rem 1.2rem;
+    }
+    .item-badge-area {
+        padding: 0.8rem 1.2rem 0 1.2rem;
+    }
+}
+
+/* accessibility & focus states */
+.dofollow-link:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+/* ensure no hidden promotional images or banners */
+img, iframe {
+    display: none;
+}
